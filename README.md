@@ -1,1 +1,2 @@
-# Jose_Andres_Solis_Sotelo_CV
+# Jose Andres Solis Sotelo Portfolio
+<p>👋 Welcome to my GitHub repository for my portfolio website! Here you'll find the codebase for my personal website, showcasing my projects, skills, and experiences as a developer.</p>

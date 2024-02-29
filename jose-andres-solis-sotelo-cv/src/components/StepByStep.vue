@@ -24,7 +24,7 @@
     <div class="w-full flex flex-col align-top items-center justify-around self-center">
       <ul role="list" class="flex w-full list-none justify-around">
         <li 
-          v-for="(step, index) in steps" :key="index" @mouseenter="stepChanged(index, step.idName)"
+          v-for="(step, index) in steps" :key="index" @click="stepChanged(index, step.idName)"
           class="transition ease-in-out delay-100 my-4 p-2 text-black hover:cursor-pointer"
           :class="index === store.selectedStep ? active : ''">
           <font-awesome-icon :icon="step.iconName" />

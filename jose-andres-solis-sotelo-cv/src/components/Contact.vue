@@ -31,7 +31,7 @@
 </script>
 
 <template>
-  <div class="w-full h-fit flex flex-col bg-[#ec879d] text-white p-4 rounded-xl self-center">
+  <div class="w-full h-fit flex flex-col bg-[#eb7f96] text-white p-4 rounded-xl self-center">
     <div class="w-full flex mb-2 space-x-3">
       <font-awesome-icon :icon="title.iconName" class="mt-auto mb-auto"/>
       <h1 class="text-xl font-semibold mt-auto mb-auto">{{ title.name }}</h1>

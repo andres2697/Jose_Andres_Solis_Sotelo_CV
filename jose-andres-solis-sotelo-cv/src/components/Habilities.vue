@@ -3,12 +3,12 @@
   // Variables
     const items = ref([
     { title: 'Desarrollo Front-End', content: '<span>· HTML5</span><span>· Responsive Design</span><span>· CSS3 (Bootstrap v. 4, Tailwind)</span><span>· Javascript (v. 8.4.371.23)</span><span>· JQuery (v. 1.10.2)</span>', expanded: false },
-    { title: 'Desarrollo Back-End', content: 'Contenido del elemento 2', expanded: false },
-    { title: 'Desarrollo Móvil', content: 'Contenido del elemento 3', expanded: false },
-    { title: 'Frameworks', content: 'Contenido del elemento 3', expanded: false },
-    { title: 'Repositorios', content: 'Contenido del elemento 3', expanded: false },
-    { title: 'Selenium', content: 'Contenido del elemento 3', expanded: false },
-    { title: 'Wordpress', content: 'Contenido del elemento 3', expanded: false }
+    { title: 'Desarrollo Back-End', content: '<span>· Consumo de API\'s</span><span>· Firebase (Cloud functions, emulator)</span><span>· MySQL</span><span>· PostgreSQL</span><span>· Python (v. 7.3)</span><span>· PHP (v. 7.2.14)</span>', expanded: false },
+    { title: 'Frameworks', content: '<span>· Vue js 3 (Vite, Moti, Headless UI)</span><span>· Expo (SDK 46)</span><span>· Angular</span><span>· Laravel</span>', expanded: false },
+    { title: 'Desarrollo Móvil', content: '<span>· React Native (v. 0.7)</span><span>· Flutter (v. 3.3.4)</span>', expanded: false },
+    { title: 'Repositorios', content: '<span>· Github</span><span>· Bitbucket</span>', expanded: false },
+    { title: 'Automatización de procesos', content: '<span>· Selenium</span><span>· Python con librería Pandas para lectura y generación de reportes automáticos en Excel</span>', expanded: false },
+    { title: 'Wordpress', content: '<span>· Implementación de E-comerce</span><span>· Administración del panel</span><span>· Creación de interfaces con el módulo de bloques</span>', expanded: false }
   ])
   const itemsPerPage = 3;
   const currentPosition = ref(0);
@@ -77,7 +77,7 @@
 </script>
 
 <template>
-  <div class="max-h-screen-minus-72 w-full flex flex-col bg-[#ec879d] text-white p-4 rounded-xl self-center">
+  <div class="max-h-screen-minus-72 w-full flex flex-col bg-[#eb7f96] text-white p-4 rounded-xl self-center">
     <div class="w-full flex space-x-3">
       <font-awesome-icon :icon="title.iconName" class="mt-auto mb-auto"/>
       <h1 class="text-lg font-semibold mt-auto mb-auto">{{ title.name }}</h1>
@@ -109,30 +109,12 @@
               :key="index" 
               class="w-1/3 h-[280px] flex flex-col p-4 ml-4 rounded-md bg-gradient-to-b from-red-400 to-pink-500">
               <h3 class="font-medium text-sm mb-2">{{ item.title }}</h3>
-              <div v-html="item.content" class="w-full h-auto flex flex-col space-y-2"></div>
+              <div v-html="item.content" class="w-full h-auto flex flex-col space-y-2 text-sm"></div>
             </div>
           </div>
         </div>
-        <div v-for="(item, index) in items" :key="index" class="space-y-5">
-          {{ item.title }}
-        </div>
         <div class="flex flex-col ml-4 space-y-1 mt-2 mb-4">
-          <p>Desarrollo Móvil</p>
-            · React Native (v. 0.7)
-            · Flutter (v. 3.3.4)
-          <p>Back-End</p>
-            · PHP (v. 7.2.14)
-            · Firebase (Cloud functions, emulator)
-            ·  Servidor HTTP Apache (v. 2.4.37)
-            ·  Python (v. 7.3) con librería Pandas
-          <p>Frameworks</p>
-            · Laravel
-            · Angular      
-            · Expo (SDK 46)
-            · Vue js 3 (Vite, Moti, Headless UI)
-          <p>GitHub</p>
-          <p>Selenium</p>
-          <p>Consumo de API's</p>
+          
           <p>Wordpress</p>
         </div>
       </div>

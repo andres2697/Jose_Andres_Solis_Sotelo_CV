@@ -1,9 +1,6 @@
 <script setup>
   import { useStore } from '../store/piniaStore.js'
   // Variables
-  defineProps({
-    steps: Array,
-  })
   const store = useStore()
   const active = 'text-purple-active'
   // Functions
@@ -17,6 +14,9 @@
       })
     }
   }
+  defineProps({
+    steps: Array,
+  })
 </script>
 
 <template>

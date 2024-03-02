@@ -15,7 +15,10 @@
       </div>
     </div>
     <div class="w-[95%] h-full flex flex-col justify-start text-start bg-[#e99162] rounded-xl p-5 mb-2 overflow-hidden">
-      <h3 class="font-bold text-white">Acerca de mi</h3>
+      <div class="w-full flex space-x-2 text-center text-white">
+        <font-awesome-icon icon="circle-info" class="mt-auto mb-auto"/>
+        <h2 class="font-bold ">A cerca de mi</h2>
+      </div>
       <span class="ml-2 text-white text-justify mt-2">
         Me considero una persona proactiva, puntual, responsable y solidaria. 
         Me gusta tomar retos, adquirir y reforzar conocimientos en áreas tecnológicas para desarrollarme 

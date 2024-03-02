@@ -7,7 +7,8 @@ export default {
   theme: {
     extend: {
       colors: {
-        'purple-active': '#a681be'
+        'purple-active': '#a681be',
+        'experience-container': '#e96262',
       },
       maxHeight: {
         'screen-minus-72': 'calc(100vh - 112px)',

@@ -38,6 +38,7 @@ library.add(
     faCertificate,
     faInfoCircle
 )
-
 const pinia = createPinia()
-createApp(App).use(pinia).component('font-awesome-icon', FontAwesomeIcon).component('GoogleMap', GoogleMap).component('Marker', Marker).mount('#app')
+const app = createApp(App)
+app.use(pinia).component('font-awesome-icon', FontAwesomeIcon).component('GoogleMap', GoogleMap).component('Marker', Marker)
+app.mount('#app')

@@ -12,7 +12,7 @@ let listOfSteps = [
 </script>
 
 <template>
-  <div class="w-full flex justify-center flex-col h-auto bg-[rgb(252,245,242)] sm:flex-row sm:h-screen">
+  <div class="w-full flex justify-center flex-col h-full bg-[rgb(252,245,242)] sm:flex-row sm:h-screen">
     <AboutMe />
     <div
       class="flex flex-col w-full h-auto max-w-full max-h-auto mr-5 mb-5 sm:h-screen sm:mb-0 sm:max-h-screen sm:max-w-screen-minus-30">

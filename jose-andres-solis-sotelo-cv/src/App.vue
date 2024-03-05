@@ -23,4 +23,7 @@ let listOfSteps = [
 </template>
 
 <style scoped>
+body {
+  background-color: rgb(252,245,242)
+}
 </style>

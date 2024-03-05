@@ -80,12 +80,12 @@
   <div class="max-h-screen-minus-72 w-full flex flex-col bg-[#eb7f96] text-white p-4 rounded-xl self-center">
     <div class="w-full flex space-x-3">
       <font-awesome-icon :icon="title.iconName" class="mt-auto mb-auto"/>
-      <h1 class="text-lg font-semibold mt-auto mb-auto">{{ title.name }}</h1>
+      <h1 class="text-base font-semibold mt-auto mb-auto sm:text-xl">{{ title.name }}</h1>
     </div>
     <div class="w-full ml-4 mt-2 overflow-hidden">
       <div class="w-full flex flex-col">
-        <h2 class="font-bold underline underline-offset-4">Habilidades Blandas</h2>
-        <p class="grid grid-cols-3 gap-2 ml-4 mt-2 mb-2">
+        <h2 class="text-sm font-bold underline underline-offset-4 sm:text-base">Habilidades Blandas</h2>
+        <p class="grid grid-cols-3 gap-2 ml-4 mt-2 mb-2 text-xs sm:text-base">
           <span>Trabajo en Equipo</span>
           <span>Responsable</span>
           <span>Proactivo</span>
@@ -93,7 +93,7 @@
           <span>Buena organización</span>
           <span>Pensamiento crítico</span>
         </p>
-        <h2 class="font-bold underline underline-offset-4 mb-3">Habilidades Técnicas</h2>
+        <h2 class="font-bold underline underline-offset-4 mb-3 text-sm sm:text-base">Habilidades Técnicas</h2>
         <div class="w-[100%] h-9 flex justify-center self-center mb-2 ml-12 mr-8">
           <div @click="scrollLeft" class="w-9 h-9 mr-5 flex text-center justify-center items-center bg-gradient-to-b from-red-400 to-pink-500 rounded-full transition duration-1000 ease-in-out hover:cursor-pointer">
             <font-awesome-icon icon="arrow-left" class="text-bold text-xl text-center hover:text-2xl"/>
@@ -108,14 +108,10 @@
               v-for="(item, index) in visibleItems" 
               :key="index" 
               class="w-1/3 h-[280px] flex flex-col p-4 ml-4 rounded-md bg-gradient-to-b from-red-400 to-pink-500">
-              <h3 class="font-medium text-sm mb-2">{{ item.title }}</h3>
-              <div v-html="item.content" class="w-full h-auto flex flex-col space-y-2 text-sm"></div>
+              <h3 class="font-medium text-xs mb-2 sm:text-sm">{{ item.title }}</h3>
+              <div v-html="item.content" class="w-full h-auto flex flex-col space-y-2 text-xs sm:text-sm"></div>
             </div>
           </div>
-        </div>
-        <div class="flex flex-col ml-4 space-y-1 mt-2 mb-4">
-          
-          <p>Wordpress</p>
         </div>
       </div>
     </div>

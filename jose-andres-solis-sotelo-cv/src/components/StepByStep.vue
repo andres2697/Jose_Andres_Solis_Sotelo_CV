@@ -20,14 +20,15 @@
 </script>
 
 <template>
-  <div class="w-full h-25 flex justify-center">
+  <div class="w-full h-20 flex justify-center sm:h-25">
     <div class="w-full flex flex-col align-top items-center justify-around self-center">
-      <ul role="list" class="flex w-full list-none justify-around">
+      <ul role="list" class="grid grid-cols-4 gap-4 w-full list-none text-center sm:flex sm:justify-around sm:text-start">
         <li 
           v-for="(step, index) in steps" :key="index" @click="stepChanged(index, step.idName)"
-          class="transition ease-in-out delay-100 my-4 p-2 text-black hover:cursor-pointer"
-          :class="index === store.selectedStep ? active : ''">
-          <font-awesome-icon :icon="step.iconName" />
+          class="flex flex-col items-center self-center transition ease-in-out delay-100 my-4 p-2 text-black text-xs hover:cursor-pointer sm:text-base sm:flex-row"
+          :class="index === store.selectedStep ? active : ''"
+        >
+          <font-awesome-icon :icon="step.iconName" class="mr-0 sm:mr-2"/>
           {{ step.name }}
         </li>
       </ul>

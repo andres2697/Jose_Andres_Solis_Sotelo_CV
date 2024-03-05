@@ -12,6 +12,9 @@ export default {
       },
       maxHeight: {
         'screen-minus-72': 'calc(100vh - 112px)',
+      },
+      maxWidth: {
+        'screen-minus-30': 'calc(100% - 29rem)',
       }
     },
   },

@@ -11,7 +11,7 @@
       <font-awesome-icon :icon="title.iconName" class="mt-auto mb-auto" />
       <h1 class="text-base font-semibold mt-auto mb-auto sm:text-xl">{{ title.name }}</h1>
     </div>
-    <div class="w-full ml-4 mt-3">
+    <div class="w-full ml-0 mt-3 sm:ml-4">
       <div class="w-full ml-1 mr-4">
         <div class="w-full flex space-x-2 text-center mb-2">
           <font-awesome-icon icon="school" class="mt-auto mb-auto"/>

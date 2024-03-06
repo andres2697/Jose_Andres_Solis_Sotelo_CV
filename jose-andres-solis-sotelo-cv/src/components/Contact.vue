@@ -109,7 +109,7 @@
               </a>
             </div>
             <div class="w-[60%] flex text-justify mx-10 text-xs sm:text-base sm:w-[50%]">
-              <span>Si desea descargar el CV en inglés, favor de cambiar el idioma con el botón de la esquina superior derecha.</span>
+              <span class="leading-tight">Si desea descargar el CV en inglés, favor de cambiar el idioma con el botón de la esquina superior izquierda en la sección "A cerca de mi".</span>
             </div>
             <div class="w-0 sm:w-[30%]"></div>
           </div>

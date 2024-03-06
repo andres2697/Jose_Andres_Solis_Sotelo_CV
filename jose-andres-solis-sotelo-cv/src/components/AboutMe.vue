@@ -18,7 +18,7 @@
         class="relative inline-flex flex-shrink-0 h-4 w-8 border-2 border-transparent rounded-full bg-gray-200 cursor-pointer transition-colors ease-in-out duration-200 focus:outline-none sm:h-6 sm:w-12"
       >
         <span
-          :class="{ 'translate-x-6': isActive, 'translate-x-0': !isActive }"
+          :class="{ 'translate-x-4': isActive, 'translate-x-0': !isActive }"
           class="inline-block h-3 w-3 rounded-full bg-slate-500 shadow transform ring-0 transition ease-in-out duration-200 sm:h-5 sm:w-5"
         ></span>
       </button>

@@ -132,15 +132,15 @@
 </script>
 
 <template>
-  <div class="max-h-auto w-full flex flex-col bg-[#eb7f96] text-white p-4 rounded-xl self-center md:max-h-screen-minus-72">
+  <div class="max-h-auto w-full flex flex-col bg-[#eb7f96] text-white p-4 rounded-xl self-center lg:max-h-screen-minus-72">
     <div class="w-full flex space-x-3">
       <font-awesome-icon :icon="title.iconName" class="mt-auto mb-auto"/>
-      <h1 class="text-base font-semibold mt-auto mb-auto md:text-xl">{{ title.name }}</h1>
+      <h1 class="text-base font-semibold mt-auto mb-auto lg:text-xl">{{ title.name }}</h1>
     </div>
-    <div class="w-full ml-0 mt-2 overflow-hidden md:ml-4">
+    <div class="w-full ml-0 mt-2 overflow-hidden lg:ml-4">
       <div class="w-full flex flex-col">
-        <h2 class="text-sm font-bold underline underline-offset-4 md:text-base">Habilidades Blandas</h2>
-        <p class="grid grid-cols-3 gap-2 ml-4 mt-2 mb-2 text-xs md:text-base">
+        <h2 class="text-sm font-bold underline underline-offset-4 lg:text-base">Habilidades Blandas</h2>
+        <p class="grid grid-cols-3 gap-2 ml-4 mt-2 mb-2 text-xs lg:text-base">
           <span>Trabajo en Equipo</span>
           <span>Responsable</span>
           <span>Proactivo</span>
@@ -148,8 +148,8 @@
           <span>Buena organización</span>
           <span>Pensamiento crítico</span>
         </p>
-        <h2 class="font-bold underline underline-offset-4 mb-3 text-sm md:text-base">Habilidades Técnicas</h2>
-        <div class="w-[100%] h-9 flex justify-center self-center mb-2 ml-0 mr-0 md:ml-12 md:mr-8">
+        <h2 class="font-bold underline underline-offset-4 mb-3 text-sm lg:text-base">Habilidades Técnicas</h2>
+        <div class="w-[100%] h-9 flex justify-center self-center mb-2 ml-0 mr-0 lg:ml-12 lg:mr-8">
           <div @click="scrollLeft" class="w-9 h-9 mr-5 flex text-center justify-center items-center bg-gradient-to-b from-red-400 to-pink-500 rounded-full transition duration-1000 ease-in-out hover:cursor-pointer">
             <font-awesome-icon icon="arrow-left" class="text-bold text-xl text-center hover:text-2xl"/>
           </div>
@@ -157,23 +157,23 @@
             <font-awesome-icon icon="arrow-right" class="text-bold text-xl text-center hover:text-2xl" />
           </div>
         </div>
-        <div class="flex x-full overflow-hidden md:w-[97%]">
+        <div class="flex x-full overflow-hidden lg:w-[97%]">
           <div class="flex transition-transform duration-700 ease-in-out w-full -translate-x-{{ currentPosition }}">
             <div
               v-if="isSmOrLarger"
               v-for="(item, index) in visibleItemsLg" 
               :key="`${index}lg`" 
               class="w-1/3 h-[280px] flex flex-col p-4 ml-4 rounded-md bg-gradient-to-b from-red-400 to-pink-500">
-              <h3 class="font-medium text-xs mb-2 md:text-sm">{{ item.title }}</h3>
-              <div v-html="item.content" class="w-full h-auto flex flex-col space-y-2 text-xs md:text-sm"></div>
+              <h3 class="font-medium text-xs mb-2 lg:text-sm">{{ item.title }}</h3>
+              <div v-html="item.content" class="w-full h-auto flex flex-col space-y-2 text-xs lg:text-sm"></div>
             </div>
             <div
               v-else
               v-for="(item, index) in visibleItemsSm" 
               :key="`${index}sm`" 
-              class="w-1/2 h-[280px] flex flex-col p-4 ml-2 rounded-md bg-gradient-to-b from-red-400 to-pink-500 md:ml-1">
-                <h3 class="font-medium text-xs mb-2 md:text-sm">{{ item.title }}</h3>
-                <div v-html="item.content" class="w-full h-auto flex flex-col space-y-2 text-xs md:text-sm"></div>
+              class="w-1/2 h-[280px] flex flex-col p-4 ml-2 rounded-md bg-gradient-to-b from-red-400 to-pink-500 lg:ml-1">
+                <h3 class="font-medium text-xs mb-2 lg:text-sm">{{ item.title }}</h3>
+                <div v-html="item.content" class="w-full h-auto flex flex-col space-y-2 text-xs lg:text-sm"></div>
             </div>
           </div>
         </div>

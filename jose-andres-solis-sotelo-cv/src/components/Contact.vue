@@ -72,18 +72,18 @@
   <div class="w-full h-fit flex flex-col bg-[#eb7f96] text-white p-4 rounded-xl self-center">
     <div class="w-full flex mb-2 space-x-3">
       <font-awesome-icon :icon="title.iconName" class="mt-auto mb-auto"/>
-      <h1 class="text-base font-semibold mt-auto mb-auto sm:text-xl">{{ title.name }}</h1>
+      <h1 class="text-base font-semibold mt-auto mb-auto md:text-xl">{{ title.name }}</h1>
     </div>
     <div class="w-full mx-4">
       <div class="w-full flex flex-col space-y-4">
-        <div class="w-full flex flex-col justify-between mt-4 sm:flex-row">
-          <div class="w-full text-sm sm:w-[30%] sm:text-base"><span class="font-semibold">Teléfono: </span><span>(744) 501-4744</span></div>
-          <div class="w-full text-sm sm:w-[40%] sm:text-base"><span class="font-semibold">Correo: </span><span>andressol296@gmail.com</span></div>
-          <div class="w-full text-sm sm:w-[30%] sm:text-base"><span class="font-semibold">Dirección: </span><span>México, CDMX</span></div>
+        <div class="w-full flex flex-col justify-between mt-4 md:flex-row">
+          <div class="w-full text-sm md:w-[30%] md:text-base"><span class="font-semibold">Teléfono: </span><span>(744) 501-4744</span></div>
+          <div class="w-full text-sm md:w-[40%] md:text-base"><span class="font-semibold">Correo: </span><span>andressol296@gmail.com</span></div>
+          <div class="w-full text-sm md:w-[30%] md:text-base"><span class="font-semibold">Dirección: </span><span>México, CDMX</span></div>
         </div>
         <div class="flex flex-col w-100%">
-          <span class="text-sm font-semibold sm:text-base">Redes Sociales:</span>
-          <div class="w-fit flex mx-0 sm:mx-5">
+          <span class="text-sm font-semibold md:text-base">Redes Sociales:</span>
+          <div class="w-fit flex mx-0 md:mx-5">
             <a
               v-for="(socialNetwork, index) in redesSociales" :key="index" 
               :href="socialNetwork.link"
@@ -99,19 +99,19 @@
           </div>
         </div>
         <div class="flex flex-col w-100%">
-          <span class="text-sm font-semibold sm:text-base">Curriculum Vitae (.pdf):</span>
+          <span class="text-sm font-semibold md:text-base">Curriculum Vitae (.pdf):</span>
           <div class="w-full flex mt-4">
-            <div class="w-[40%] flex justify-end items-center sm:w-[20%]">
+            <div class="w-[40%] flex justify-end items-center md:w-[20%]">
               <a :href="store.urlDownloadCvButton" v-if="store.urlDownloadCvButton !== ''" target="_blank">
                 <div class="w-fit flex flex-col p-2 rounded-md bg-slate-500 hover:bg-slate-500/75 cursor-pointer">
-                  <span class="text-xs font-semibold sm:text-sm">Descargar CV</span>
+                  <span class="text-xs font-semibold md:text-sm">Descargar CV</span>
                 </div>
               </a>
             </div>
-            <div class="w-[60%] flex text-justify mx-10 text-xs sm:text-base sm:w-[50%]">
+            <div class="w-[60%] flex text-justify mx-10 text-xs md:text-base md:w-[50%]">
               <span class="leading-tight">Si desea descargar el CV en inglés, favor de cambiar el idioma con el botón de la esquina superior izquierda en la sección "A cerca de mi".</span>
             </div>
-            <div class="w-0 sm:w-[30%]"></div>
+            <div class="w-0 md:w-[30%]"></div>
           </div>
         </div>
       </div>

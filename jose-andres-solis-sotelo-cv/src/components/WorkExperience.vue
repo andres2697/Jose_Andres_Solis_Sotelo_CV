@@ -17,10 +17,10 @@
 </script>
 
 <template>
-  <div class="w-full flex flex-col bg-[#eb7f96] text-white p-4 rounded-xl self-center sm:max-h-screen-minus-72">
+  <div class="w-full flex flex-col bg-[#eb7f96] text-white p-4 rounded-xl self-center md:max-h-screen-minus-72">
     <div class="w-full flex mb-2 space-x-3">
       <font-awesome-icon :icon="title.iconName" class="mt-auto mb-auto"/>
-      <h1 class="text-base font-semibold mt-auto mb-auto sm:text-xl">{{ title.name }}</h1>
+      <h1 class="text-base font-semibold mt-auto mb-auto md:text-xl">{{ title.name }}</h1>
     </div>
     <div class="w-full flex flex-col mr-4 mt-4 mb-4">
       <div class="w-full flex mb-5">
@@ -30,7 +30,7 @@
           :class="index === store.selectedJob ? activeJob : 'bg-opacity-30'"
           @click="changeShowedJob(index)"
         >
-          <div class="w-full flex text-center justify-center text-xs font-semibold sm:text-base">{{ trabajo.nombreEmpresa }}</div>
+          <div class="w-full flex text-center justify-center text-xs font-semibold md:text-base">{{ trabajo.nombreEmpresa }}</div>
         </div>
       </div>
       <div
@@ -43,15 +43,15 @@
               <font-awesome-icon icon="address-card" class="mt-auto mb-auto" />
             </div>
             <div class="w-full flex flex-col">
-              <span class="text-sm sm:text-base">{{ trabajoDetalle.descripcionPuesto }}</span>
-              <span class="text-xs mt-0 sm:text-sm sm:-mt-1">{{ trabajoDetalle.periodo }}</span>
+              <span class="text-sm md:text-base">{{ trabajoDetalle.descripcionPuesto }}</span>
+              <span class="text-xs mt-0 md:text-sm md:-mt-1">{{ trabajoDetalle.periodo }}</span>
             </div>
           </div>
-          <div class="w-full flex flex-col mt-3 sm:flex-row">
-            <div class="w-full flex flex-col sm:w-[50%]">
-              <div class="w-full flex space-x-1 justify-center text-center mb-2 sm:space-x-2">
+          <div class="w-full flex flex-col mt-3 md:flex-row">
+            <div class="w-full flex flex-col md:w-[50%]">
+              <div class="w-full flex space-x-1 justify-center text-center mb-2 md:space-x-2">
                 <font-awesome-icon icon="list-check" class="mt-auto mb-auto"/>
-                <h3 class="text-sm sm:text-base">Actividades realizadas</h3>
+                <h3 class="text-sm md:text-base">Actividades realizadas</h3>
               </div>
               <div class="w-100% text-justify ml-4 mr-3">
                 <ul role="list" class="flex flex-col w-full list-decimal">
@@ -63,11 +63,11 @@
                 </ul>
               </div>
             </div>
-            <div class="w-full mt-4 flex mx-2 sm:w-[50%] sm:mt-0">
+            <div class="w-full mt-4 flex mx-2 md:w-[50%] md:mt-0">
               <div class="w-full flex flex-col">
                 <div class="w-full flex space-x-2 justify-center text-center mb-2">
                   <font-awesome-icon icon="location-dot" class="mt-auto mb-auto"/>
-                  <h3 class="text-sm sm:text-base">Ubicación</h3>
+                  <h3 class="text-sm md:text-base">Ubicación</h3>
                 </div>
                 <div class="h-full w-full">
                   <GoogleMap

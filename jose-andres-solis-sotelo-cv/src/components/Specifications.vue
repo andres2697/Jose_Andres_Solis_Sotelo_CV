@@ -11,7 +11,7 @@
 </script>
 
 <template>
-  <div class="w-[95%] mx-auto flex sm:w-full sm:mx-0">
+  <div class="w-[95%] mx-auto flex md:w-full md:mx-0">
     <Contact :title="steps[0]" v-if="store.selectedStep === steps[0].id" />
     <Habilities :title="steps[1]" v-if="store.selectedStep === steps[1].id" />
     <Education :title="steps[2]" v-if="store.selectedStep === steps[2].id" />

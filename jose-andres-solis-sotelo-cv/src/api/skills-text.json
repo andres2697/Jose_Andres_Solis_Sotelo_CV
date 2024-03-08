@@ -1,0 +1,34 @@
+[
+    {
+        "listOfSoftSkills": {
+            "esp": {
+                "title": "Habilidades Blandas",
+                "list": [
+                    "Trabajo en Equipo",
+                    "Responsable",
+                    "Proactivo",
+                    "Liderazgo",
+                    "Buena organización",
+                    "Pensamiento crítico"
+                ]
+            },
+            "eng": {
+                "title": "Soft Skills",
+                "list": [
+                    "Teamwork",
+                    "Responsible",
+                    "Proactive",
+                    "Leadership",
+                    "Good organization",
+                    "Critical thinking"
+                ]
+            }
+        },
+        "listOfTechnicalSkills": {
+            "title": {
+                "esp": "Habilidades Técnicas",
+                "eng": "Technical Skills"
+            }
+        }
+    }
+]

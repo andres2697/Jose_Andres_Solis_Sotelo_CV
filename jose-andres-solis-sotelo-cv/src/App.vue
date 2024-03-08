@@ -4,10 +4,10 @@ import Specifications from './components/Specifications.vue'
 import StepByStep from './components/StepByStep.vue'
 // Variables
 let listOfSteps = [
-  { id: 0, idName: 'contacto', name: 'Contacto', iconName: 'user'},
-  { id: 1, idName: 'habilidades', name: 'Habilidades', iconName: 'gear'},
-  { id: 2, idName: 'formacion-academica', name: 'Formación Académica', iconName: 'graduation-cap'},
-  { id: 3, idName: 'experiencia-laboral', name: 'Experiencia Laboral', iconName: 'briefcase'}
+  { id: 0, idName: 'contacto', name: 'Contacto', englishName: 'Contact', iconName: 'user'},
+  { id: 1, idName: 'habilidades', name: 'Habilidades', englishName: 'Skills', iconName: 'gear'},
+  { id: 2, idName: 'formacion-academica', name: 'Formación Académica', englishName: 'Education', iconName: 'graduation-cap'},
+  { id: 3, idName: 'experiencia-laboral', name: 'Experiencia Laboral', englishName: 'Work Experience', iconName: 'briefcase'}
 ]
 </script>
 

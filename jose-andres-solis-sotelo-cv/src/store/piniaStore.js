@@ -5,7 +5,8 @@ export const useStore = defineStore({
   state: () => ({
     selectedStep: 0,
     selectedJob: 0,
-    urlDownloadCvButton: ''
+    urlDownloadCvButton: '',
+    spanish: true
   }),
   actions: {
     setSelectedStep(value) {
@@ -16,6 +17,9 @@ export const useStore = defineStore({
     },
     setUrlDownloadCvButton(value) {
       this.urlDownloadCvButton = value
+    },
+    setSpanish(value) {
+      this.spanish = value
     }
   }
 })

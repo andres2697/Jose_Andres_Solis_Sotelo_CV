@@ -1,8 +1,12 @@
 <script setup>
-  import { ref } from 'vue';
-  const isActive = ref(false)
+  import { useStore } from '../store/piniaStore.js'
+  import aboutMeTextJson from '../api/about-me-text.json'
+  // Variables
+  const store = useStore()
+  const aboutMeText = aboutMeTextJson[0]
   const toggleSwitch = () => {
-    isActive.value = !isActive.value
+    store.setSpanish(!store.spanish)
+    console.log(store.spanish)
   }
 </script>
 
@@ -12,48 +16,56 @@
     id="shadow"
   >
     <div class="flex justify-start space-x-3 w-full h-auto items-center">
-      <span class="text-white font-semibold text-xs lg:text-sm ml-3">ESP</span>
+      <span class="text-white font-semibold text-xs lg:text-sm ml-3">
+        {{ store.spanish ? aboutMeText.lang.esp[0] : aboutMeText.lang.eng[0] }}
+      </span>
       <button
         @click="toggleSwitch"
         class="relative inline-flex flex-shrink-0 h-4 w-8 border-2 border-transparent rounded-full bg-gray-200 cursor-pointer transition-colors ease-in-out duration-200 focus:outline-none lg:h-6 lg:w-12"
       >
         <span
-          :class="{ 'translate-x-4 lg:translate-x-6': isActive, 'translate-x-0': !isActive }"
+          :class="{ 'translate-x-0': store.spanish, 'translate-x-4 lg:translate-x-6': !store.spanish }"
           class="inline-block h-3 w-3 rounded-full bg-slate-500 shadow transform ring-0 transition ease-in-out duration-200 lg:h-5 lg:w-5"
         ></span>
       </button>
-      <span class="text-white font-semibold text-xs lg:text-sm">ING</span>
+      <span class="text-white font-semibold text-xs lg:text-sm">
+        {{ store.spanish ? aboutMeText.lang.esp[1] : aboutMeText.lang.eng[1] }}
+      </span>
     </div>
     <div class="w-fit flex flex-row lg:flex-col">
       <div class="flex flex-col justify-center text-center w-[45%] lg:w-full">
         <div class="w-full flex justify-center">
-          <div class="rounded-[50%] w-36 h-36 overflow-hidden lg:w-52 lg:h-52">
+          <div class="rounded-[50%] w-36 h-36 overflow-hidden sm:w-44 sm:h-44 lg:w-52 lg:h-52">
             <img class="w-full h-full object-cover" src="../assets/foto-perfil-linkedin.jpeg">
           </div>
         </div>
-        <div class="flex flex-col font-bold text-center text-white -mt-3 mb-4 lg:-mt-8">
-          <span class="text-sm lg:text-3xl">José Andrés Solís Sotelo</span>
-          <span class="text-xs lg:text-base">Ingeniero en Computación</span>
+        <div class="flex flex-col font-bold text-center text-white -mt-3 mb-4 sm:-mt-5 lg:-mt-8">
+          <span class="text-sm sm:text-xl lg:text-3xl">José Andrés Solís Sotelo</span>
+          <span class="text-xs lg:text-base">
+            {{ store.spanish ? aboutMeText.career.esp : aboutMeText.career.eng }}
+          </span>
         </div>
       </div>
-      <div class="w-[55%] h-auto flex flex-col justify-start text-start bg-[#e99162] rounded-xl p-5 mb-2 overflow-hidden mt-2 ml-1 lg:w-[95%] lg:h-full">
+      <div class="w-[55%] h-auto flex flex-col justify-start text-start bg-[#e99162] rounded-xl p-5 mb-2 overflow-hidden mt-2 ml-1 sm:h-auto lg:w-[95%] lg:h-full">
         <div class="w-full flex space-x-2 text-center text-white text-xs lg:text-base">
           <font-awesome-icon icon="circle-info" class="mt-auto mb-auto"/>
-          <h2 class="font-bold ">A cerca de mi</h2>
+          <h2 class="font-bold ">
+            {{ store.spanish ? aboutMeText.title.esp : aboutMeText.title.eng }}
+          </h2>
         </div>
         <div class="w-full mt-2 ml-2 text-justify text-xs lg:text-base">
           <span class=" text-white">
-            Me considero una persona proactiva, puntual, responsable y solidaria. 
-            Me gusta tomar retos, adquirir y reforzar conocimientos en áreas tecnológicas para desarrollarme 
-            profesionalmente y mejorar mis resultados en el campo laboral.
+            {{ store.spanish ? aboutMeText.description.esp[0] : aboutMeText.description.eng[0] }}
             <br>
-            Desarrollador de software con 3 años de experiencia en el campo de TI.
+            {{ store.spanish ? aboutMeText.description.esp[1] : aboutMeText.description.eng[1] }}
           </span>
         </div>
       </div>
     </div>
     <div class="flex flex-col w-[95%] h-fit justify-center text-center items-center">
-      <span class="text-white text-[9px] lg:text-xs">Esta página fue desarrollada usando Vite, Vuejs 3, Firebase y Google Maps.</span>
+      <span class="text-white text-[9px] lg:text-xs">
+        {{ store.spanish ? aboutMeText.pageDevInfo.esp : aboutMeText.pageDevInfo.eng }}
+      </span>
     </div>
   </div>
 </template>

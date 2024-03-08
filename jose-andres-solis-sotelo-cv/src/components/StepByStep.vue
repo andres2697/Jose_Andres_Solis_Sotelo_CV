@@ -29,7 +29,7 @@
           :class="index === store.selectedStep ? active : ''"
         >
           <font-awesome-icon :icon="step.iconName" class="mr-0 lg:mr-2"/>
-          {{ step.name }}
+          {{ store.spanish ? step.name : step.englishName }}
         </li>
       </ul>
     </div>

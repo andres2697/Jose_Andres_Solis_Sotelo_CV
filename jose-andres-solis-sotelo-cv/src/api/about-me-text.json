@@ -1,0 +1,24 @@
+[
+    {
+        "lang": {
+            "esp": ["ESP", "ING"],
+            "eng": ["SPA", "ENG"]
+        },
+        "career": {
+            "esp": "Ingeniero en Computación",
+            "eng": "Computer Engineer"
+        },
+        "title": {
+            "esp": "A cerca de mi",
+            "eng": "About Me"
+        },
+        "description": {
+            "esp": ["Me considero una persona proactiva, puntual, responsable y solidaria. Me gusta tomar retos, adquirir y reforzar conocimientos en áreas tecnológicas para desarrollarme profesionalmente y mejorar mis resultados en el campo laboral.", "Desarrollador de software con 3 años de experiencia en el campo de TI."],
+            "eng": ["I consider myself a proactive, punctual, responsible and supportive person. I like to take challenges, acquire and reinforce knowledge in technological areas to develop myself professionally and improve my results in the workplace.", "Software developer with 3 years of experience in the IT environment."]
+        },
+        "pageDevInfo": {
+            "esp": "Esta página fue desarrollada usando Vite, Vuejs 3, Firebase y Google Maps.",
+            "eng": "This page was developed using Vite, Vuejs 3, Firebase and Google Maps."
+        }
+    }
+]

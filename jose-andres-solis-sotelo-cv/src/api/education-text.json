@@ -1,0 +1,75 @@
+[
+    {
+        "lastDegree": {
+            "title": {
+                "esp": "Último grado de estudios",
+                "eng": "Highest degree obtained"
+            },
+            "institution": {
+                "name": "Instituto Politécnico Nacional",
+                "description": {
+                    "esp": "Ingeniero en computación. Titulado en marzo del 2020.",
+                    "eng": "Computer engineer. Graduated in March 2020"
+                }
+            }
+        },
+        "languajes": {
+            "title": {
+                "esp": "Idiomas",
+                "eng": "Languajes"
+            },
+            "language": [
+                {
+                    "spanish": {
+                        "esp": "Español",
+                        "eng": "Spanish",
+                        "description": {
+                            "esp": "Lengua Materna.",
+                            "eng": "Native Language."
+                        }
+                    }
+                },
+                {
+                    "english": {
+                        "esp": "Inglés",
+                        "eng": "English",
+                        "institutions": [
+                            {
+                                "name": "Harmon Hall",
+                                "description": {
+                                    "esp": "Nivel Avanzado (B2). Concluido en noviembre del 2014.",
+                                    "eng": "Advanced Level (B2). Completed in November 2014."
+                                }
+                            },
+                            {
+                                "name": "Cursos Extracurriculares de Lenguas Extranjeras (CELEX) unidad Culhuacán, IPN",
+                                "description": {
+                                    "esp": "Nivel Avanzado (B2). Concluido en diciembre del 2019.",
+                                    "eng": "Advanced Level (B2). Completed in December 2019."
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "courses": {
+            "title": {
+                "esp": "Cursos",
+                "eng": "Courses"
+            },
+            "coursesList": [
+                {
+                    "courseName": {
+                        "esp": "Desarrollo de páginas con Angular",
+                        "eng": "Web pages development with Angular"
+                    },
+                    "description": {
+                        "esp": "Concluido el 15 de octubre del 2021.",
+                        "eng": "Completed on October 15th, 2021."
+                    }
+                }
+            ]
+        }
+    }
+]

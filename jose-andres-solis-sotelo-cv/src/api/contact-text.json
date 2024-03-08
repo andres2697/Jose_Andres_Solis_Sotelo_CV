@@ -1,0 +1,34 @@
+[
+    {
+        "title": {
+            "phone": {
+                "esp": "Teléfono: ",
+                "eng": "Phone Number: "
+            },
+            "email": {
+                "esp": "Correo: ",
+                "eng": "E-mail: "
+            },
+            "address": {
+                "esp": "Dirección: ",
+                "eng": "Address: "
+            },
+            "socialNetworks": {
+                "esp": "Redes Sociales:",
+                "eng": "Social Networks:"
+            },
+            "resume": {
+                "esp": "Curriculum Vitae (.pdf):",
+                "eng": "Resumé (.pdf):"
+            }
+        },
+        "cvDownloadButton": {
+            "esp": "Descargar CV",
+            "eng": "Download Resumé"
+        },
+        "note": {
+            "esp": "Si desea descargar el CV en inglés, favor de cambiar el idioma con el botón de la esquina superior izquierda en la sección \"A cerca de mi\".",
+            "eng": "If you want to download the Resumé in spanish, please change the lenguaje with the left-top corner in \"About Me\" section."
+        }
+    }
+]

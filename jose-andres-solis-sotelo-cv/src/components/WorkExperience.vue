@@ -1,6 +1,6 @@
 <script setup>
   import { useStore } from '../store/piniaStore.js'
-  import workExperience from '../api/work-experience.json'
+  import workExperience from '../api/work-experience-text.json'
   // Variables
   const store = useStore()
   const activeJob = 'bg-opacity-75'
@@ -20,7 +20,9 @@
   <div class="w-full flex flex-col bg-[#eb7f96] text-white p-4 rounded-xl self-center lg:max-h-screen-minus-72">
     <div class="w-full flex mb-2 space-x-3">
       <font-awesome-icon :icon="title.iconName" class="mt-auto mb-auto"/>
-      <h1 class="text-base font-semibold mt-auto mb-auto lg:text-xl">{{ title.name }}</h1>
+      <h1 class="text-base font-semibold mt-auto mb-auto lg:text-xl">
+        {{ store.spanish ? title.name : title.englishName }}
+      </h1>
     </div>
     <div class="w-full flex flex-col mr-4 mt-4 mb-4">
       <div class="w-full flex mb-5">
@@ -43,20 +45,27 @@
               <font-awesome-icon icon="address-card" class="mt-auto mb-auto" />
             </div>
             <div class="w-full flex flex-col">
-              <span class="text-sm lg:text-base">{{ trabajoDetalle.descripcionPuesto }}</span>
-              <span class="text-xs mt-0 lg:text-sm lg:-mt-1">{{ trabajoDetalle.periodo }}</span>
+              <span class="text-sm lg:text-base">{{ store.spanish ? trabajoDetalle.descripcionPuesto.esp : trabajoDetalle.descripcionPuesto.eng }}</span>
+              <span class="text-xs mt-0 lg:text-sm lg:-mt-1">{{ store.spanish ? trabajoDetalle.periodo.esp : trabajoDetalle.periodo.eng }}</span>
             </div>
           </div>
           <div class="w-full flex flex-col mt-3 lg:flex-row">
             <div class="w-full flex flex-col lg:w-[50%]">
               <div class="w-full flex space-x-1 justify-center text-center mb-2 lg:space-x-2">
                 <font-awesome-icon icon="list-check" class="mt-auto mb-auto"/>
-                <h3 class="text-sm lg:text-base">Actividades realizadas</h3>
+                <h3 class="text-sm lg:text-base">{{ store.spanish ? "Actividades realizadas" : "Performed Activities"}}</h3>
               </div>
               <div class="w-100% text-justify ml-4 mr-3">
                 <ul role="list" class="flex flex-col w-full list-decimal">
-                  <li 
-                    v-for="(actividad, index) in trabajoDetalle.actividadesRealizadas" :key="index"
+                  <li
+                    v-if="store.spanish" 
+                    v-for="(actividad, index) in trabajoDetalle.actividadesRealizadas.esp" :key="index"
+                    class="my-1 text-sm">
+                    {{ actividad }}
+                  </li>
+                  <li
+                    v-if="!store.spanish" 
+                    v-for="(actividad, index) in trabajoDetalle.actividadesRealizadas.eng" :key="index"
                     class="my-1 text-sm">
                     {{ actividad }}
                   </li>
@@ -67,7 +76,7 @@
               <div class="w-full flex flex-col">
                 <div class="w-full flex space-x-2 justify-center text-center mb-2">
                   <font-awesome-icon icon="location-dot" class="mt-auto mb-auto"/>
-                  <h3 class="text-sm lg:text-base">Ubicación</h3>
+                  <h3 class="text-sm lg:text-base">{{ store.spanish ? 'Ubicación' : 'Location' }}</h3>
                 </div>
                 <div class="h-full w-full">
                   <GoogleMap
